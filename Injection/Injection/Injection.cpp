@@ -5,12 +5,11 @@
 BOOL SetDebugPrivilege(HANDLE hToken, LPCTSTR lpsz, BOOL Enable);
 int main()
 {
-	/*
 	HANDLE hToken = NULL;
-	LPCSTR DllPath = "F:\\Injection\\Debug\\injector.dll";
+	LPCSTR DllPath = "F:\\Injection\\x64\\Debug\\injector.dll";
 	HANDLE hProcess;
 	hProcess = OpenProcess(PROCESS_CREATE_THREAD | PROCESS_QUERY_INFORMATION | PROCESS_ALL_ACCESS |
-		PROCESS_VM_OPERATION | PROCESS_VM_READ | PROCESS_VM_WRITE, FALSE, 9900);  
+		PROCESS_VM_OPERATION | PROCESS_VM_READ | PROCESS_VM_WRITE, FALSE, 11120);  
 	if (OpenProcessToken(hProcess, TOKEN_ADJUST_PRIVILEGES, &hToken))
 		SetDebugPrivilege(hToken, SE_DEBUG_NAME, TRUE);
 	else
@@ -29,8 +28,7 @@ int main()
 	std::cin.get();
 	VirtualFreeEx(hProcess, pDllPath, strlen(DllPath) + 1, MEM_RELEASE);
 	CloseHandle(hProcess);
-	*/
-
+	/*
 	HMODULE dll = LoadLibrary(L"F:\\Injection\\x64\\Debug\\injector.dll");
 	if (dll == NULL)
 	{
@@ -51,7 +49,7 @@ int main()
 	}
 	printf("Program injection is successful\n");
 	UnhookWindowsHookEx(handle);
-
+	*/
 	return 0;
 }
 

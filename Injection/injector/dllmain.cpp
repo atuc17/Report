@@ -17,9 +17,3 @@ BOOL APIENTRY DllMain( HMODULE hModule,
     }
     return TRUE;
 }
-
-extern "C" __declspec(dllexport) int meconnect(int nCode, WPARAM wParam, LPARAM lParam)
-{
-	printf("Windows hook call\n");
-	return CallNextHookEx(NULL, nCode, wParam, lParam);
-}
